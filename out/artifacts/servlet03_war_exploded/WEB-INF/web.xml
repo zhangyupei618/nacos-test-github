@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>root</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>123456</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-class>com.abc.servlet.Aservlet</servlet-class>
+        <servlet-name>aservlet</servlet-name>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>aservlet</servlet-name>
+        <url-pattern>/aservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-class>com.abc.servlet.Bservlet</servlet-class>
+        <servlet-name>bservlet</servlet-name>
+        <init-param>
+            <param-name>user</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <param-name>pass</param-name>
+            <param-value>1234</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>bservlet</servlet-name>
+        <url-pattern>/bservlet</url-pattern>
+    </servlet-mapping>
+</web-app>
