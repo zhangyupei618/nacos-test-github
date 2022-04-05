@@ -9,3 +9,5 @@ abc
 <%=i %>
 
 <% out.write(i); %>
+
+<% System.out.println("123");  %>
